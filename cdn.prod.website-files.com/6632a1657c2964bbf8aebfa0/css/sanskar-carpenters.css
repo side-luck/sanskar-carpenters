@@ -5243,6 +5243,7 @@ blockquote {
 }
 
 .hero-media {
+  position: relative;
   overflow: hidden;
 }
 
@@ -5262,5 +5263,79 @@ blockquote {
 @media screen and (max-width: 767px) {
   .hero-video {
     height: 500px;
+  }
+}
+
+.hero-scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  background-color: rgba(20, 20, 20, 0.35);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  text-decoration: none;
+  padding: 0;
+  font: inherit;
+  line-height: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  transform: translateX(-50%);
+  transition: background-color 0.25s ease;
+}
+
+.hero-scroll svg {
+  animation: hero-scroll-bob 1.8s ease-in-out infinite;
+}
+
+.hero-scroll:hover {
+  background-color: rgba(20, 20, 20, 0.6);
+}
+
+.hero-scroll:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+@keyframes hero-scroll-bob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+#top-content {
+  scroll-margin-top: 84px;
+}
+
+@media screen and (max-width: 767px) {
+  .hero-scroll {
+    bottom: 18px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll svg {
+    animation: none;
   }
 }
