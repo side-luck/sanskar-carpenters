@@ -1,0 +1,2 @@
+# Keep old mirrored URLs working after flattening the site to the domain root.
+/sanskar-carpenters/*  /:splat  301

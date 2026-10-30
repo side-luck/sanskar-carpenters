@@ -1,0 +1,21 @@
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Cache-Control: public, max-age=0, must-revalidate
+
+/cdn.prod.website-files.com/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts.gstatic.com/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts.googleapis.com/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/d3e54v103j8qbb.cloudfront.net/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/ajax.googleapis.com/*
+  Cache-Control: public, max-age=31536000, immutable
